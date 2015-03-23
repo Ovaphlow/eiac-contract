@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block user_name %}{{ user_name }}{% endblock %}
+{% block content_center %}
+<h3>
+  <p>黑龙江省环评中心</p>
+</h3>
+<form class="form-inline" action="" method="post">
+  <label for="name">项目名 ：<input id="name" name="name" /></label>
+  <button class="btn btn-primary">检索</button>
+</form>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>项目名称</th>
+      <th>受理人</th>
+      <th>项目负责人</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in rows %}
+    <tr>
+      <td>{{ row.ProjectName }}</td>
+      <td>{{ row.hesuanren }}</td>
+      <td>{{ row.pingshenxiangmufuzeren }}</td>
+      <td>
+        <a href="/generate_contract?project_id={{ row.ID }}" target="_blank" class="btn btn-success">Excel</a>
+        <a href="/generate_pdf?project_id={{ row.ID }}" target="_blank" class="btn btn-danger">PDF</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<hr />
+
+{% endblock %}

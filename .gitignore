@@ -1,3 +1,6 @@
+python-env/*
+contract/static/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
