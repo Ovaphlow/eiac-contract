@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>建设项目环境影响评价文件在线技术评估系统</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//libs.baidu.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+  </style>
+  {% block html_head %}{% endblock %}
+</head>
+<body style="background:dimgrey" {% block body_lib %}{% endblock %}>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/"><strong>黑龙江省环评中心</strong></a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+<!--
+            <li><a href="/"><i class="icon-home"></i>首页</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-edit"></i>审批流程
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/list_1">受理</a></li>
+                <li><a href="/list_2">部门分配</a></li>
+                <li><a href="/list_3">项目负责</a></li>
+                <li><a href="/list_4">现场踏察</a></li>
+                <li><a href="/list_5">专家会议</a></li>
+                <li><a href="/list_6">评估意见</a></li>
+                <li><a href="/list_7">项目考评</a></li>
+                <li><a href="/list_8">汇总上报</a></li>
+              </ul>
+            </li>
+            <li><a href="/project_current"><i class="icon-list"></i>在审项目</a></li>
+            <li><a href="/project_search"><i class="icon-search"></i>综合查询</a></li>
+            <li><a href="/project_statistics"><i class="icon-picture"></i>统计图表</a></li>
+-->
+          </ul>
+          <ul class="nav pull-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-user"></i>{{ user_name }}
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">修改密码</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header"></li>
+              </ul>
+            </li>
+            <li><a href="/logout"><i class="icon-off"></i>退出</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="background:Ivory url(//localhost:8080/img/5-13050GZ017.jpg)">
+    <div class="row-fluid">
+      <div class="span1">
+      {% block content_left %}{% endblock %}
+      </div>
+      <div class="span10">
+      {% block content_center %}{% endblock %}
+      </div>
+      <div class="span1">
+      {% block content_right %}{% endblock %}
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar navbar-bottom navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/"><strong>建设项目环境影响评价文件在线技术评估系统</strong></a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="#">[技术支持]电话：18686853420；QQ：2340538</a></li>
+            <li></li>
+          </ul>
+          <ul class="nav pull-right">
+            <li><a href="#"><strong>&copy; 成铭科技 2014</strong></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="//libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//libs.baidu.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  {% block javascript_lib %}{% endblock %}
+</body>
+</html>

@@ -26,9 +26,12 @@ def generate_pdf(project_id):
     generate_contract_1(project_id)
     xls_path = os.path.join(os.getcwd(), TEMPLATE_FILE_PATH, '%s.xls' % \
         (project_id))
+    # print(xls_path)
     pdf_path = os.path.join(os.getcwd(), TEMPLATE_FILE_PATH)
+    # print(pdf_path)
     cmd_str = '%s --headless --invisible -convert-to pdf %s --outdir %s ' % \
         (SOFFICE_PATH, xls_path, pdf_path)
+    # print(cmd_str)
     os.system(cmd_str)
     os.system('taskkill /f /im soffice.bin')
     os.system('taskkill /f /im soffice.exe')

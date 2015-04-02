@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 python-env/*
 contract/static/*
+app/contract/static/*
 
-=======
->>>>>>> 05a7044c9accd143861f7ae249837623fa2111ca
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

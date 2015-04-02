@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block user_name %}{{ user_name }}{% endblock %}
+{% block content_center %}
+<h3>
+  <p>{{ user_name }}</p>
+</h3>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>项目名称</th>
+      <th>受理人</th>
+      <th>项目负责人</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in rows %}
+    <tr>
+      <td>{{ row.ProjectName }}</td>
+      <td>{{ row.xiangmushouliren}}</td>
+      <td>{{ row.pingshenxiangmufuzeren}}</td>
+      <td><a href="/generate_pdf?project_id={{ row.ID }}" target="_blank" class="btn btn-danger">生成合同</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<hr />
+
+{% endblock %}
